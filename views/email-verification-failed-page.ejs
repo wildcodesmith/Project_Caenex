@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="./src/output.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="w-screen h-screen flex justify-center items-center">
+        <!-- tablet -->
+        <div
+            class=" border-14  border-black w-240 h-150 rounded-4xl shadow-[8px_8px_8px_gray] relative overflow-hidden bg-black ">
+
+            <!-- tablet display -->
+            <div id="tablet-display"
+                class="relative w-full h-full bg-neutral-900 overflow-hidden  border border-t-0  border-white/9 border-r-[rgb(73,73,73)] shadow-inner transition-all duration-700 ">
+                <!-- black color of display -->
+                <div
+                    class="absolute inset-0 bg-linear-to-tr from-transparent via-white/2 to-white/[0.07] pointer-events-none z-10 ">
+                </div>
+
+                <!-- tablet  display content -->
+                <div class="  flex-col gap-8  absolute inset-0 justify-center items-center flex  pointer-events-none transition-all duration-500 shadow-inner ease-[ cubic-bezier(0.25, 1, 0.5, 1)]"
+                    id="tablet-display-content">
+
+                    <h1 class="font-semibold text-5xl text-red-600"><%= errorTitle %></h1>
+                    <h2 class="text-2xl  font-medium text-gray-400 text-center text-shadow-2xs  tracking-wide">
+                        <%= errorMessage %>
+                    </h2>
+                    
+                    <h2 class="font-semibold text-3xl text-gray-300">
+                        <%= tryMessage %>
+                    </h2>
+                    <a href="<%= link %>" class="pointer-events-auto bg-lime-500 text-white text-shadow-[1px_0px_5px_black] font-semibold text-lg px-3 py-1 rounded-2xl border border-lime-400     absolute bottom-10 right-10 active:translate-y-1   transform-translate ease-in duration-100 cursor-[] tracking-wide" data-type="button" >Back to Login</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

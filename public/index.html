@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caenex</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="font-[Inter] bg-[rgb(206,206,206)] ">
+
+    <!-- first page -->
+    <section class="bg-[url(../images/bg.jpg)] bg-cover bg-no-repeat bg-center w-screen h-screen pt-6 overflow-hidden">
+
+        <nav
+            class="  m-auto w-fit h-fit   flex shadow-xl backdrop-blur-xs bg-gray-50/10 border border-slate-200 rounded-2xl ">
+            <p class=" w-25 h-14  flex justify-center items-center ">
+                <a href="#"><span class="hover:text-xl font-extrabold text-xl">Caenex</span></a>
+            </p>
+            <p class=" w-25 h-14  flex justify-center items-center text-center">
+                <a href="#"><span
+                        class="hover:text-sm font-medium text-zinc-600 ease-linear  transition-all duration-100 ">Features</span></a>
+            </p>
+            <p class=" w-25 h-14  flex justify-center items-center text-center">
+                <a href="#"><span
+                        class="hover:text-sm font-medium text-zinc-600 ease-linear  transition-all duration-100">FAQ</span></a>
+            </p>
+            <p class=" w-30 h-14  mr-8 flex justify-center items-center  text-center">
+                <a href="#"><span
+                        class="hover:text-sm font-medium text-zinc-600  ease-linear  transition-all duration-100 ">Contact
+                        Us</span></a>
+            </p>
+            <p class=" w-28 h-14  flex justify-center items-center ">
+                <button id="signInNavBtn"
+                    class="   font-extrabold   bg-black text-white px-5 py-2 rounded-2xl hover:bg-zinc-800 active:translate-y-1   transform-translate ease-in duration-100">Sign
+                    In</button>
+            </p>
+
+        </nav>
+        <div class="w-full  h-full   flex justify-center items-center">
+            <div
+                class="   backdrop-blur-xs bg-gray-50/30 shadow-xl border border-slate-200 rounded-2xl  m-auto w-200 flex justify-center items-center flex-col pt-10 px-10 pb-4 gap-6">
+                <h1 class="font-extrabold text-6xl">Find your space</h1>
+
+                <p class="text-zinc-500 font-medium text-justify ">
+                    Find & Book available academic spaces in real-time for club meetings, project work, and seminars. No
+                    more
+                    running around departments or dealing with double-bookings. Check live room availability, submit
+                    requests, and get automatic confirmations all in one place.
+                </p>
+                <div>
+                    <button id="getStartedBtn"
+                        class="  font-extrabold   bg-black text-white px-5 py-2 rounded-2xl hover:bg-zinc-800  active:translate-y-1   transform-translate ease-in duration-100">
+                        Get
+                        Started </button>
+                </div>
+                <p class="text-zinc-500 text-sm mt-6">• For Students • For Faculty • For HODs • For Admins</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- second page -->
+    <section class="w-screen h-screen flex justify-center items-center">
+        <!-- tablet -->
+        <div
+            class=" border-14  border-black w-240 h-150 rounded-4xl shadow-[8px_8px_8px_gray] relative overflow-hidden bg-black ">
+
+            <!-- tablet display -->
+            <div id="tablet-display"
+                class="relative w-full h-full bg-neutral-900 overflow-hidden  border border-t-0  border-white/9 border-r-[rgb(73,73,73)] shadow-inner transition-all duration-700 ">
+                <!-- black color of display -->
+                <div
+                    class="absolute inset-0 bg-linear-to-tr from-transparent via-white/2 to-white/[0.07] pointer-events-none z-10 ">
+                </div>
+
+                <!-- tablet  display content -->
+                <div class="  flex-row   absolute inset-0 justify-start items-start flex opacity-0 pointer-events-none transition-all duration-500 shadow-inner ease-[ cubic-bezier(0.25, 1, 0.5, 1)]"
+                    id="tablet-display-content">
+                    <article class="relative inset-0 w-full shrink-0 h-full flex flex-row ">
+                        <!-- signIn signUp wrapper -->
+                        <div class="relative w-1/2 h-full overflow-hidden  ">
+                            <!-- sign in logic -->
+                            <div class="w-full h-full p-5 flex flex-col items-center justify-center gap-5  bg-white absolute    z-10 transition-all duration-300 ease-in [-webkit-mask-image:-webkit-radial-gradient(white,black)]"
+                                id="signInContainer">
+                                <div
+                                    class="flex flex-col justify-start   py-1 px-10 items-start bg-zinc-200/40 rounded-2xl h-full  ">
+                                    <h1 class="w-full text-5xl font-semibold">Caenex</h1>
+                                    <h3 class="w-full  text-2xl text-gray-700/90 font-semibold  mt-4 mb-3">Get started
+                                    </h3>
+                                    <h5 class="w-full text-sm text-zinc-500/60 mb-5">"Real-time space coordination and
+                                        resource
+                                        scheduling engineered for seamless campus management."</h5>
+                                    <form action="" class="w-full flex flex-col gap-7">
+
+                                        <div class="w-full  border-none bg-white  rounded-2xl">
+                                            <input type="text" id="username" name="userName" placeholder="Username"
+                                                class="w-full h-fit px-4 py-2 border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                        </div>
+
+                                        <div class="w-full border  border-none bg-white  rounded-2xl">
+
+                                            <input type="password" name="password" id="password" placeholder="Password"
+                                                class="w-full h-fit px-4 py-2  border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                        </div>
+
+                                        <input type="submit" value="Log In" id="logInButton"
+                                            class=" font-extrabold   bg-black text-white px-5 py-2 rounded-2xl hover:bg-zinc-800 active:translate-y-1   transform-translate ease-in duration-100 ">
+
+
+                                    </form>
+
+                                    <h4 class="mt-5 text-gray-600">Don't have an account? <span id="signUpLink"
+                                            class="text-sky-600   hover:text-[15.5px] font-bold transition-all ease-in duration-200">Create
+                                            Account</span></h4>
+                                </div>
+                                <div
+                                    class="flex flex-row justify-start gap-5 py-4  px-10 items-center bg-zinc-200/40 rounded-2xl h-full    border-t-black">
+                                    <figure>
+                                        <img src="images/team-icon.svg" alt="team"
+                                            class="w-30 transition-opacity duration-1000">
+                                    </figure>
+                                    <p class="text-lg text-black font-medium leading-none ">Join our community <br>
+                                        <span class="w-full text-sm text-zinc-500/60"> Connecting students, faculty, and
+                                            administrative departments </span>
+
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- sign up logic -->
+                            <div class="w-full h-full p-4 pb-3 flex-col items-center justify-center gap-4  bg-white  absolute  z-0  opacity-0 pointer-events-none transition-all duration-300 ease-in"
+                                id="signUpContainer">
+                                <div
+                                    class="flex flex-col justify-start   py-2 px-10 items-start bg-zinc-200/40 rounded-2xl h-full  ">
+                                    <h1 class="w-full text-5xl font-semibold">Caenex</h1>
+                                    <h3 class="w-full text-2xl text-gray-500/90 font-semibold mt-5 mb-4">Create your
+                                        account
+                                    </h3>
+
+                                    <form action="/signUp" id="signUpForm" class="w-full flex flex-col gap-7">
+
+                                        <div class="w-full  border-none bg-white  rounded-2xl">
+                                            <input type="email" id="email" name="email" placeholder="Email"
+                                                class="w-full h-fit px-4 py-2 border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl  rounded-2xl">
+                                        </div>
+                                        <div class="w-full  border-none bg-white  rounded-2xl">
+                                            <input type="text" name="userName" placeholder="Username" id="new-user-name"
+                                                class="w-full h-fit px-4 py-2 border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl  rounded-2xl">
+                                        </div>
+                                        <div class="w-full  border-none bg-white  rounded-2xl">
+                                            <input type="password" name="password" id="new-password"
+                                                placeholder="Password"
+                                                class="w-full h-fit px-4 py-2 border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl  rounded-2xl">
+                                        </div>
+
+                                        <div class="w-full border  border-none bg-white  rounded-2xl">
+
+                                            <input type="password" name="c-password" placeholder="Confirm Password"
+                                                id="new-c-password"
+                                                class="w-full h-fit px-4 py-2  border border-transparent focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                        </div>
+
+                                        <input type="submit" value="Create Account" id="createAccountBtn"
+                                            class=" font-extrabold   bg-black text-white px-5 py-2 rounded-2xl hover:bg-zinc-800 active:translate-y-1   transform-translate ease-in duration-100">
+
+
+                                    </form>
+
+                                    <h4 class="mt-3 mb-4 text-gray-600">Existing Account? <span id="signInLink" class="text-sky-600   hover:text-[15.5px]
+                                        font-bold  transition-all ease-in duration-200">Log
+                                            In</span></h4>
+
+                                    <h5 class="w-full text-sm text-zinc-500/60 mb-5">By creating an account, you agree
+                                        to
+                                        our
+                                        Terms of Service & acknowledge our Privacy Policy</h5>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div
+                            class="bg-[url(../images/bg_tab.jpg)] bg-center bg-no-repeat bg-cover w-1/2 h-full text-white flex flex-col items-center justify-evenly gap-8 p-10  ">
+                            <p class="text-4xl text-center">"Intelligent scheduling. Built to eliminate administrative
+                                friction."</p>
+                            <p
+                                class="backdrop-blur-xs w-fit h-fit bg-gray/5 text-center border border-gray-100/9 shadow-2xl border-r-gray-200 border-b-gray-200 p-5 rounded-2xl">
+                                "Instantly reserve classrooms, laboratories, and seminar halls with automated,
+                                multi-tier
+                                approval pipelines."
+                            </p>
+                        </div>
+                    </article>
+                    <article
+                        class="w-full shrink-0 h-full flex  flex-col justify-center items-center gap-5 ">
+                        <img src="images/user_icon.png" alt="" class="w-50  ">
+                        <h1
+                            class="text-3xl font-semibold text-white text-center text-shadow-2xs text-shadow-zinc-700 tracking-wide">
+                            Account created successfully!
+                        </h1>
+                        <h3 class="text-base  font-medium text-gray-400 text-center text-shadow-2xs  tracking-wide">
+                            Check your email to verify and proceed further</h3>
+                    </article>
+
+                    <article class="absolute  w-full  z-20 " >
+                        <h1 class="w-50 m-auto bg-red-600/49 backdrop-blur-sm text-white text-2xl text-shadow-[0px_2px_8px_#0b0000] text-center rounded-2xl px-4 py-3 shadow-[0px_1px_3px_0px_black] border border-[#ff9696]  transition-all duration-500 ease-in-out opacity-0" id="toastMessage"></h1>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

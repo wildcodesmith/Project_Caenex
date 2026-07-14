@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verify Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="font-[Inter] bg-[rgb(206,206,206)]">
+
+    <section class="w-screen h-screen flex justify-center items-center">
+        <!-- tablet -->
+        <div
+            class=" border-14  border-black w-240 h-150 rounded-4xl shadow-[8px_8px_8px_gray] relative overflow-hidden bg-black ">
+
+            <!-- tablet display -->
+            <div id="tablet-display"
+                class="relative w-full h-full bg-neutral-900 overflow-hidden  border border-t-0  border-white/9 border-r-[rgb(73,73,73)] shadow-inner transition-all duration-700 ">
+                <!-- black color of display -->
+                <div
+                    class="absolute inset-0 bg-linear-to-tr from-transparent via-white/2 to-white/[0.07] pointer-events-none z-10 ">
+                </div>
+
+                <!-- tablet  display content -->
+                <div class="  flex-row   absolute inset-0 justify-start items-start flex   pointer-events-none transition-all duration-500 shadow-inner ease-[ cubic-bezier(0.25, 1, 0.5, 1)] "
+                    id="tablet-display-content">
+
+                    <!-- email verification page -->
+                    <article id="emailVerificationPage"
+                        class="w-full shrink-0 h-full flex  flex-col justify-center items-center gap-5 pointer-events-auto transition-all duration-500  ease-[ cubic-bezier(0.25, 1, 0.5, 1)] ">
+                        <img src="images/account-email-icon.png" alt="" class="w-45  ">
+                        <h1
+                            class="text-3xl font-semibold text-white text-center text-shadow-2xs text-shadow-zinc-700 tracking-wide">
+                            Email Verfied successfully!
+                        </h1>
+                        <h3 class="text-base  font-medium text-gray-400 text-center text-shadow-2xs  tracking-wide">
+                            Please provide your academic credentials to proceed.</h3>
+                        <button id="continueToProfileBtn"
+                            class="bg-lime-500 text-white text-shadow-[1px_0px_5px_black] font-semibold text-lg px-3 py-1 rounded-2xl border border-lime-400     absolute bottom-10 right-10 active:translate-y-1   transform-translate ease-in duration-100">Continue
+                            to Profile</button>
+                    </article>
+
+                    <!-- form page -->
+                    <article
+                        class="pointer-events-auto opacity-0 transition-all duration-500  ease-[ cubic-bezier(0.25, 1, 0.5, 1)] "
+                        id="userProfilePage">
+                        <div class="w-full h-full p-3 flex flex-row items-center justify-center gap-5  bg-white absolute    z-10 transition-all duration-300 ease-in [-webkit-mask-image:-webkit-radial-gradient(white,black)]"
+                            id="signInContainer">
+                            <div class="w-1/3    h-full   flex flex-col gap-10 justify-center items-center ">
+                                <h1 class="font-black text-black text-7xl text-shadow-[0px_20px_12px_#cacaca]">
+                                    Caenex
+                                </h1>
+                                <h2 class="w-full text-3xl font-bold overflow-hidden text-center text-gray-500 ">User
+                                    Profile</h2>
+                                   
+                            </div>
+                              <article class="absolute w-full backdrop-blur-xs h-full  items-center justify-center top-0 z-20 hidden transition-all duration-500 ease-in-out" id="toastMessageArticle">
+                                        <h1 class="w-70 m-auto bg-green-400/49 backdrop-blur-sm text-[#082c05] text-2xl  text-center font-bold rounded-2xl px-7 py-5 shadow-[0px_1px_3px_0px_black] border border-[#d0ffd0]  transition-all duration-500 ease-in-out"
+                                            id="toastMessage">Profile saved! <br>Redirecting to login... </h1>
+                                    </article>
+
+
+                            <div
+                                class="flex flex-col justify-start   py-5 px-10 items-start bg-zinc-200/40 rounded-2xl h-full w-2/3 ">
+
+
+
+                                <form class="w-full flex flex-col  gap-7 overflow-hidden" id="userProfileForm">
+
+
+
+                                    <section class="flex flex-row justify-center items-center gap-20 text-2xl">
+                                        <label
+                                            class="flex gap-5 justify-center items-center pointer-cursor-class font-medium">
+                                            <input type="radio" required name="role" id="studentRadio"
+                                                value="student">student
+                                        </label>
+                                        <label
+                                            class="flex gap-5 justify-center items-center pointer-cursor-class font-medium">
+                                            <input type="radio" required name="role" id="facultyRadio"
+                                                value="faculty">faculty
+                                        </label>
+                                    </section>
+
+                                    <section
+                                        class=" flex flex-row  w-full transition-all duration-500  ease-[ cubic-bezier(0.25, 1, 0.5, 1)]"
+                                        id="infoForm">
+
+                                        <!-- for student -->
+                                        <article
+                                            class="flex flex-col gap-6 w-full shrink-0 transition-all duration-500  ease-[ cubic-bezier(0.25, 1, 0.5, 1)]"
+                                            id="studentInfoForm">
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="studentName">Name </label>
+                                                <input type="text" id="studentName" name="studentName"
+                                                    placeholder="name"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+
+                                            <div class="flex flex-row justify-between items-center">
+                                                <label for="gender">Gender</label>
+                                                <div class="flex justify-between items-cente w-1/2">
+                                                    <label
+                                                        class="flex   flex-row justify-between items-center gap-2  pointer-cursor-class">
+                                                        <input type="radio" id="maleRadio" name="gender" value="male"
+                                                            class="  h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                        Male </label>
+                                                    <label
+                                                        class="flex  flex-row justify-center items-center gap-2 pointer-cursor-class">
+                                                        <input type="radio" id="femaleRadio" name="gender"
+                                                            value="female"
+                                                            class="h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                        Female
+                                                    </label>
+                                                    <label
+                                                        class="flex  flex-row justify-center items-center gap-2 pointer-cursor-class">
+                                                        <input type="radio" id="otherRadio" name="gender" value="other"
+                                                            class="  h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                        Other
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="rollNumber">Roll number </label>
+                                                <input type="text" id="rollNumber" name="rollNumber"
+                                                    placeholder="roll number"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="branch">Branch </label>
+                                                <input type="text" id="branch" name="branch" placeholder="branch"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="academicYear">Academic year</label>
+                                                <select name="academicYear" id="academicYear"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                    <option value="first year">first year</option>
+                                                    <option value="second year">second year</option>
+                                                    <option value="third year">third year</option>
+                                                    <option value="fourth year">fourth year</option>
+                                                </select>
+                                            </div>
+
+
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="studentPhone">Phone number</label>
+                                                <input type="tel" id="studentPhone" name="studentPhone"
+                                                    placeholder="phone number"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                        </article>
+
+                                        <!-- for faculty -->
+                                        <article
+                                            class="flex flex-col gap-6  w-full shrink-0 opacity-0 transition-all duration-500  ease-[ cubic-bezier(0.25, 1, 0.5, 1)]"
+                                            id="facultyInfoForm">
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="title">Title</label>
+                                                <select name="title" id="title"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                    <option value="prof">Prof.</option>
+                                                    <option value="dr">Dr.</option>
+                                                    <option value="mr">Mr.</option>
+                                                    <option value="mrs">Mrs.</option>
+                                                    <option value="mx">Mx.</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="facultyName">Name </label>
+                                                <input type="text" id="facultyName" name="facultyName"
+                                                    placeholder="name"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+
+
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="facultyID">Faculty ID</label>
+                                                <input type="text" id="facultyID" name="facultyID"
+                                                    placeholder="faculty id"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="department">Department </label>
+                                                <input type="text" id="department" name="department"
+                                                    placeholder="department"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="designation">Designation</label>
+                                                <select name="desgination" id="designation"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                                    <option value="assistentProfessor">Assistant Professor</option>
+                                                    <option value="associateProfessor">Associate Professor,</option>
+                                                    <option value="fullProfessor">Full Professor</option>
+                                                    <option value="headOfDepartment">Head of Department</option>
+                                                </select>
+                                            </div>
+
+
+
+                                            <div class="flex flex-row justify-between items-center  ">
+                                                <label for="facultyPhone">Phone number</label>
+                                                <input type="tel" id="facultyPhone" name="facultyPhone"
+                                                    placeholder="phone number"
+                                                    class="w-1/2 h-fit px-4 py-2 border border-transparent bg-white focus:outline-none focus:border-slate-400 focus:border focus:rounded-2xl rounded-2xl">
+                                            </div>
+
+                                        </article>
+
+
+
+                                    </section>
+                                   
+                                    <input type="hidden" id="secretLinkingToken" value="<%= linkingToken %>">
+
+
+                                    <div class="flex justify-end pb-5">
+                                        <input type="submit" value="Save  Profile" id="saveProfileBtn"
+                                            class="w-fit font-medium   bg-black text-white px-7 py-2 rounded-2xl hover:bg-zinc-800 active:translate-y-1   transform-translate ease-in duration-100 ">
+
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="verification_userProfile_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+*{
+ box-sizing: border-box;
+  
+}
+::selection{
+  background-color: rgba(91, 91, 91, 0.228);
+}
+
+@layer base {
+ .pointer-cursor-class, a, body {
+    cursor: url('/images/cursor.png')8 4 , default;
+  }
+  
+   button,[role="button"] {
+    cursor: url('/images/cursor3.png')16 1 , pointer;
+  }
+  input[type="submit"]{
+    cursor: url('/images/cursor3.png')16 1, pointer;
+  }
+    input[type="radio"]{
+    cursor: url('/images/cursor.png')8 4, default;
+  }
+  a[data-type="button"]{
+    cursor: url('/images/cursor3.png')16 1 , pointer;
+    
+  }
+}
+
+ 
