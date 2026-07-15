@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caenex</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <link href="./src/output.css" rel="stylesheet">
 </head>
-<body>
-    <h1>welcome sir</h1>
+
+<body class="bg-neutral-300/70 grid grid-cols-[1fr_3fr_1fr] p-5  h-screen w-screen overflow-hidden">
+  <!-- left section nav bar -->
+  <section class=" flex flex-col  h-full items-start justify-start px-5">
+    <div class="text-5xl font-semibold   justify-center items  border-b-gray-400 border-b-2 py-5   w-full text-start">
+      Caenex</div>
+    <div class="flex flex-row justify-start items-center w-full gap-5 border-t-gray-100 border-t-3 pt-5">
+      <figure class="  w-15">
+        <img src="images/user-pic.png" alt="user-pic" class="w-full">
+      </figure>
+      <div class="flex flex-col items-start justify-center">
+        <p class="text-xl font-semibold">John doe</p>
+        <p class="text-base text-gray-600 font-light tracking-wider">customerpop@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- room section -->
+  <section
+    class="  bg-neutral-300/50 h-full  border border-t-[#939393] border-l-[#d2d0d0] border-b-[#d2d0d0] border-r-0   box-border  rounded-l-3xl  flex flex-col justify-start items-between overflow-y-auto  ">
+
+    <div class="bg-black w-full  p-5   flex flex-row justify-evenly items-center ">
+
+      <p class=" bg-neutral-100 px-5 py-2 rounded-2xl">
+        <label for="date">Date : </label>
+        <input type="date" id="date">
+      </p>
+
+      <p class=" bg-neutral-100 px-5 py-2 rounded-2xl">
+        <label for="fromTime">From : </label>
+        <input type="time" id="fromTime">
+      </p>
+      <p class=" bg-neutral-100 px-5 py-2 rounded-2xl">
+        <label for="toTime">To : </label>
+        <input type="time" id="toTime">
+      </p>
+
+    </div>
+    <article class="w-full  flex flex-row justify-start items-start flex-wrap    border-r-gray-400 border-r-2"
+      id="buildingRooms">
+      <div class="bg-red-500 w-30 h-30 m-10"></div>
+    </article>
+  </section>
+
+  <!-- building section -->
+  <section
+    class=" bg-neutral-300/50 h-full flex flex-col justify-start items-center overflow-y-auto border border-l-0  border-t-[#939393]  border-r-[#939393]  border-b-[#d2d0d0]   box-border   rounded-r-3xl   "
+    id="buildings">
+
+
+    <article class="border-l-gray-50 border-l-3 w-full">
+      <div class="bg-green-500 w-50 h-50 m-10" id="macs" data-room="35">MACS</div>
+      <div class="bg-green-500 w-50 h-50 m-10">CHEMISTRY DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">CS DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">CIVIL DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">META DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">AI DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">IT DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">EC DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">HUMANITIES DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">CHEMICAL DEPARTMENT</div>
+      <div class="bg-green-500 w-50 h-50 m-10">LHC - D</div>
+      <div class="bg-green-500 w-50 h-50 m-10">CIDS</div>
+    </article>
+
+  </section>
+  <script src="page_script.js"></script>
 </body>
+
 </html>
